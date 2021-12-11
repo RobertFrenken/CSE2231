@@ -1,0 +1,29 @@
+    PROGRAM BUG IS
+
+        INSTRUCTION FindObstacle IS
+            WHILE next-is-empty DO
+                move
+            END WHILE
+        END FindObstacle
+		
+		INSTRUCTION Infect IS
+			IF next-is-empty THEN
+				infect
+			END IF
+		END Infect
+
+		INSTRUCTION RandomWallTurn IS
+			IF random THEN
+				turnleft
+			ELSE
+				turnright
+			END IF
+		END RandomWallTurn
+		
+    BEGIN
+        WHILE true DO
+            FindObstacle
+            Infect
+            RandomWallTurn
+        END WHILE
+    END BUG
